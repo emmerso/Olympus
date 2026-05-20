@@ -124,30 +124,63 @@
     sendBtn.disabled = true;
     sendBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
     
-    const templateParams = {
-      to_email: 'coschik44@gmail.com',
-      from_name: n,
-      from_email: e,
-      service: s,
-      message: m
-    };
+    const recipients = [
+      'coschik44@gmail.com',
+      'bvirindij@gmail.com',
+      'simmondsfm@gmail.com'
+    ];
     
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', templateParams)
-      .then(function(response) {
-        const t=document.getElementById('toast');
-        t.classList.add('on');
-        setTimeout(()=>t.classList.remove('on'),4000);
-        document.getElementById('fn').value='';
-        document.getElementById('fe').value='';
-        document.getElementById('fs').selectedIndex=0;
-        document.getElementById('fm').value='';
-        sendBtn.disabled = false;
-        sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-      }, function(error) {
-        alert('Failed to send message. Please try again.');
-        sendBtn.disabled = false;
-        sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-      });
+    let sentCount = 0;
+    let failedCount = 0;
+    
+    recipients.forEach(email => {
+      const templateParams = {
+        to_email: email,
+        from_name: n,
+        from_email: e,
+        service: s,
+        message: m
+      };
+      
+      emailjs.send('SERVICE_ID', 'TEMPLATE_ID', templateParams)
+        .then(function(response) {
+          sentCount++;
+          if(sentCount + failedCount === recipients.length) {
+            const t=document.getElementById('toast');
+            if(failedCount === 0) {
+              t.innerHTML = '<i class="fas fa-check me-2"></i>Message sent successfully — we\'ll be in touch!';
+              t.classList.remove('error');
+            } else {
+              t.innerHTML = '<i class="fas fa-warning me-2"></i>Message sent to some recipients. Please check your connection.';
+              t.classList.add('error');
+            }
+            t.classList.add('on');
+            setTimeout(()=>t.classList.remove('on'),5000);
+            document.getElementById('fn').value='';
+            document.getElementById('fe').value='';
+            document.getElementById('fs').selectedIndex=0;
+            document.getElementById('fm').value='';
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+          }
+        }, function(error) {
+          failedCount++;
+          if(sentCount + failedCount === recipients.length) {
+            const t=document.getElementById('toast');
+            if(sentCount > 0) {
+              t.innerHTML = '<i class="fas fa-warning me-2"></i>Message sent to some recipients. Please check your connection.';
+              t.classList.add('error');
+            } else {
+              t.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Failed to send message. Please try again.';
+              t.classList.add('error');
+            }
+            t.classList.add('on');
+            setTimeout(()=>t.classList.remove('on'),5000);
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+          }
+        });
+    });
   }
 
   // Cookie Consent Management
