@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "builds": [{ "src": "*.html", "use": "@vercel/static" }]
+  "buildCommand": "echo 'Static site'",
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/(?:.*\\.(?:html|css|js|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))", "continue": true },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
