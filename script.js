@@ -1,11 +1,3 @@
- // Hide preloader on page load
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-      preloader.classList.add('hide');
-    }, 500);
-  });
-
   // Navbar solid on scroll
   const nav = document.getElementById('mainNav');
   const btt = document.getElementById('btt');
@@ -110,9 +102,15 @@
   });
 
   // Send form with EmailJS
-  emailjs.init("YOUR_PUBLIC_KEY_HERE");
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("YOUR_PUBLIC_KEY_HERE");
+  }
   
   function doSend(){
+    if (typeof emailjs === 'undefined') {
+      alert('Email service is not loaded. Please try again.');
+      return;
+    }
     const n=document.getElementById('fn').value.trim();
     const e=document.getElementById('fe').value.trim();
     const s=document.getElementById('fs').value;
@@ -188,25 +186,28 @@
   const cookieAccept = document.getElementById('cookieAccept');
   const cookieReject = document.getElementById('cookieReject');
 
-  // Check if user has already made a choice
-  const cookieConsent = localStorage.getItem('cookieConsent');
-  if (!cookieConsent) {
-    setTimeout(() => {
-      cookieBanner.classList.add('show');
-    }, 1500);
+  // Ensure elements exist
+  if (cookieBanner && cookieAccept && cookieReject) {
+    // Check if user has already made a choice
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (!cookieConsent) {
+      setTimeout(() => {
+        cookieBanner.classList.add('show');
+      }, 1500);
+    }
+
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieBanner.classList.remove('show');
+      // Here you can enable Google Analytics and other tracking
+      enableAnalytics();
+    });
+
+    cookieReject.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'rejected');
+      cookieBanner.classList.remove('show');
+    });
   }
-
-  cookieAccept.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'accepted');
-    cookieBanner.classList.remove('show');
-    // Here you can enable Google Analytics and other tracking
-    enableAnalytics();
-  });
-
-  cookieReject.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'rejected');
-    cookieBanner.classList.remove('show');
-  });
 
   function enableAnalytics() {
     // Google Analytics will already be loaded if cookies are accepted
@@ -248,3 +249,38 @@
       }
     });
   });
+
+  // Unique Feature: Floating Glow Effect on Cursor Movement
+  const createGlowEffect = () => {
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    
+    let mouseX = 0, mouseY = 0;
+    let glowX = 0, glowY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    
+    const animateGlow = () => {
+      glowX += (mouseX - glowX) * 0.1;
+      glowY += (mouseY - glowY) * 0.1;
+      glow.style.left = glowX + 'px';
+      glow.style.top = glowY + 'px';
+      requestAnimationFrame(animateGlow);
+    };
+    
+    animateGlow();
+    
+    document.addEventListener('mouseenter', () => {
+      glow.style.opacity = '1';
+    });
+    
+    document.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+    });
+  };
+  
+  createGlowEffect();
