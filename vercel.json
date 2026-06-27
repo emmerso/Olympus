@@ -4,7 +4,13 @@
     {
       "source": "/(.*)",
       "destination": "https://olympusrets.net/$1",
-      "permanent": true
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "olympus-kohl.vercel.app"
+        }
+      ]
     }
   ]
 }
