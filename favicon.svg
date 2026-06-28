@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" width="200" height="44"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#c9921e;stop-opacity:1"></stop>
-      <stop offset="100%" style="stop-color:#e8a832;stop-opacity:1"></stop>
-    </linearGradient>
-  </defs><polygon points="8,38 22,8 36,38" fill="url(#goldGrad)"></polygon><polygon points="0,38 13,22 22,38" fill="#c9921e" opacity="0.45"></polygon><polygon points="26,38 36,20 46,38" fill="#c9921e" opacity="0.3"></polygon><polygon points="22,8 17,20 27,20" fill="#ffffff" opacity="0.9"></polygon><line x1="0" y1="38" x2="48" y2="38" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"></line><text x="56" y="30" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="1.5">OLYMPUS</text><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(1); } }
-</style></svg>
