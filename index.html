@@ -169,23 +169,27 @@
 </head>
 <body>
 
+<!-- ── CURSOR GLOW ── -->
+<div class="cursor-glow" aria-hidden="true"></div>
+
 <!-- ── NAVBAR ── -->
 <nav id="mainNav" class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
   <div class="container">
-   <a href="#hero" aria-label="Olympus home">
-  <img src="./images/olympus-logo.svg" alt="Olympus RETS brand logo showing stylized gold mountain icon and OLYMPUS text" height="36"/>
-</a>
+    <a href="#hero" aria-label="Olympus home">
+      <img src="./images/olympus-logo.svg" alt="Olympus RETS logo" height="36"/>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nm" aria-controls="nm" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nm">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
-        <li><a class="nav-link" href="#about" title="Learn about us">About</a></li>
-        <li><a class="nav-link" href="#services" title="View our services">Services</a></li>
-        <li><a class="nav-link" href="#clients" title="See who we serve">Clients</a></li>
-        <li><a class="nav-link" href="#work" title="See completed work">Our Work</a></li>
-        <li><a class="nav-link" href="#team" title="Meet the team">Team</a></li>
-        <li class="ms-lg-2"><a class="nav-link nav-cta" href="#contact" title="Get in touch">Contact Us</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#clients">Clients</a></li>
+        <li><a class="nav-link" href="#work">Our Work</a></li>
+        <li><a class="nav-link" href="#team">Team</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="ms-lg-2"><a class="nav-link nav-cta" href="#contact">Contact Us</a></li>
       </ul>
     </div>
   </div>
@@ -196,12 +200,12 @@
   <div class="container hero-inner">
     <div class="row align-items-center">
       <div class="col-lg-8">
-        
+        <div class="hero-chip"><span>&#9670;</span> Harare, Zimbabwe &nbsp;·&nbsp; Est. 2015</div>
         <h1 class="hero-title">Research.<br/><span>Evaluation.</span> Training.</h1>
         <p class="hero-desc">Delivering world-class consulting, evaluation and training services to governments, NGOs, development agencies and the corporate world.</p>
         <div class="hero-actions">
-          <a href="#services" class="btn-primary-gold" title="Go to services section">Our Services</a>
-          <a href="#contact" class="btn-ghost" title="Go to contact form">Get In Touch</a>
+          <a href="#services" class="btn-primary-gold">Our Services</a>
+          <a href="#contact" class="btn-ghost">Get In Touch</a>
         </div>
         <div class="hero-kpi" aria-label="Key performance indicators">
           <div><div class="kpi-n counter" data-target="18">0</div><div class="kpi-l">Projects</div></div>
@@ -220,8 +224,7 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-5 rv">
         <div class="position-relative">
-          <img src="./images/consulting.svg"
-               alt="Olympus consultants reviewing documents together in a bright office setting" class="about-img" loading="lazy"/>
+          <img src="./images/consulting.svg" alt="Olympus consultants reviewing documents" class="about-img" loading="lazy"/>
           <div class="about-float">
             <div class="n">2015</div>
             <small>Established</small>
@@ -232,9 +235,8 @@
         <span class="s-label">Who We Are</span>
         <h2 class="s-title">A World-Class Provider of <em>Business Solutions</em></h2>
         <div class="gold-bar"></div>
-        <p class="s-lead mb-3">Olympus Research, Evaluation and Training Services helps organisations address pressing questions to realise their missions and visions. We serve clients across all sect[...]
-        <p style="color:var(--grey);font-size:.9rem;line-height:1.8;" class="mb-4">Based at 9561 Chipukutu Park, Ruwa, our experienced consultant team brings rigour and practical insight[...]
-
+        <p class="s-lead mb-3">Olympus Research, Evaluation and Training Services helps organisations address pressing questions to realise their missions and visions. We serve clients across all sectors with rigour, integrity and practical insight.</p>
+        <p style="color:var(--grey);font-size:.9rem;line-height:1.8;" class="mb-4">Based in Ruwa, Zimbabwe, our experienced consultant team brings deep expertise in qualitative and quantitative research, MEAL frameworks, data systems, and capacity building — delivering results that matter.</p>
         <p style="font-size:.8rem;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--navy);margin-bottom:10px;">Our Core Values</p>
         <span class="val-chip"><i class="fas fa-lightbulb"></i>Innovation</span>
         <span class="val-chip"><i class="fas fa-arrow-trend-up"></i>Continuous Improvement</span>
@@ -242,11 +244,10 @@
         <span class="val-chip"><i class="fas fa-users"></i>Customer Focus</span>
         <span class="val-chip"><i class="fas fa-shield-halved"></i>Integrity</span>
         <span class="val-chip"><i class="fas fa-fire-flame-curved"></i>Diligence</span>
-
         <div class="mt-4">
           <p style="font-size:.8rem;color:var(--grey);line-height:1.75;margin:0;">
             <strong style="color:var(--navy);">Vision:</strong> To be a world class provider of business solutions, through excellent research, evaluation and training services.<br/>
-            <strong style="color:var(--navy);">Mission:</strong> To provide robust research, evaluation and training services to governments, intergovernmental organizations, NGOs and the corporate wo[...]
+            <strong style="color:var(--navy);">Mission:</strong> To provide robust research, evaluation and training services to governments, intergovernmental organizations, NGOs and the corporate world.
           </p>
         </div>
       </div>
@@ -357,7 +358,7 @@
       <div class="col-md-6 col-lg-4 rv">
         <div class="w-card">
           <div class="w-num">#02</div>
-          <p>Labor Market Assessment — Analyzing youth employment pathways, vocational skills demand, and sectoral growth opportunities for youths aged 18-24 years.</p>
+          <p>Labor Market Assessment — Analyzing youth employment pathways, vocational skills demand, and sectoral growth opportunities for youths aged 18–24 years.</p>
           <div class="w-tag"><i class="fas fa-briefcase me-1"></i>Bantwana Zimbabwe</div>
         </div>
       </div>
@@ -378,14 +379,14 @@
       <div class="col-md-6 col-lg-4 rv">
         <div class="w-card">
           <div class="w-num">#14</div>
-          <p>End of Term Evaluation — Fambidzanai Permaculture Centre project on Strengthening Sustainable Agriculture and Marketing (SSAM) in Matobo District of Matabeleland South.</p>
+          <p>End of Term Evaluation — Fambidzanai Permaculture Centre project on Strengthening Sustainable Agriculture and Marketing (SSAM) in Matobo District.</p>
           <div class="w-tag"><i class="fas fa-leaf me-1"></i>Fambidzanai</div>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 rv">
         <div class="w-card">
           <div class="w-num">#15</div>
-          <p>Outcome evaluation of the National AIDS Council (NAC) supported Young People's Network on Adolescent Sexual Reproductive Health & HIV/AIDS in Matabeleland South Province.</p>
+          <p>Outcome evaluation of the National AIDS Council (NAC) supported Young People's Network on Adolescent Sexual Reproductive Health & HIV/AIDS in Matabeleland South.</p>
           <div class="w-tag"><i class="fas fa-heart-pulse me-1"></i>National AIDS Council</div>
         </div>
       </div>
@@ -405,38 +406,92 @@
       </div>
     </div>
     <div class="row g-3 justify-content-center">
+
+      <!-- Cosmas -->
       <div class="col-6 col-md-3 rv">
         <div class="t-card">
-          <div class="t-av">CC</div>
+          <!-- PHOTO PLACEHOLDER — replace src with actual photo later -->
+          <div class="t-photo-wrap">
+            <img src="" alt="Cosmas Chikwawawa" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="t-av" style="display:flex;">CC</div>
+          </div>
           <h6>Cosmas Chikwawawa</h6>
           <div class="role">Lead Consultant</div>
-          <div style="font-size:.75rem;color:#999;margin-top:4px;">Qualitative Research & Stakeholder Engagement</div>
+          <div class="t-spec">Qualitative Research & Stakeholder Engagement</div>
+          <div class="t-actions">
+            <a href="mailto:cosmaschikwawawa@olympusrets.net" class="t-btn t-btn-email" title="Email Cosmas" aria-label="Email Cosmas Chikwawawa">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+263" class="t-btn t-btn-phone" title="Call Cosmas — number coming soon" aria-label="Phone Cosmas Chikwawawa">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- Everson -->
       <div class="col-6 col-md-3 rv">
         <div class="t-card">
-          <div class="t-av">EM</div>
+          <div class="t-photo-wrap">
+            <img src="" alt="Everson Molande" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="t-av" style="display:flex;">EM</div>
+          </div>
           <h6>Everson Molande</h6>
           <div class="role">Lead Consultant</div>
-          <div style="font-size:.75rem;color:#999;margin-top:4px;">Data Systems, MEAL & Analytics</div>
+          <div class="t-spec">Data Systems, MEAL & Analytics</div>
+          <div class="t-actions">
+            <a href="mailto:eversonmolande@olympusrets.net" class="t-btn t-btn-email" title="Email Everson" aria-label="Email Everson Molande">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+263" class="t-btn t-btn-phone" title="Call Everson — number coming soon" aria-label="Phone Everson Molande">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- John -->
       <div class="col-6 col-md-3 rv">
         <div class="t-card">
-          <div class="t-av">JVC</div>
+          <div class="t-photo-wrap">
+            <img src="" alt="John Victor Chiyani" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="t-av" style="display:flex;">JVC</div>
+          </div>
           <h6>John Victor Chiyani</h6>
           <div class="role">Lead Consultant</div>
-          <div style="font-size:.75rem;color:#999;margin-top:4px;">Livelihoods & Labour Market Economics</div>
+          <div class="t-spec">Livelihoods & Labour Market Economics</div>
+          <div class="t-actions">
+            <a href="mailto:johnchiyani@olympusrets.net" class="t-btn t-btn-email" title="Email John" aria-label="Email John Victor Chiyani">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+263" class="t-btn t-btn-phone" title="Call John — number coming soon" aria-label="Phone John Victor Chiyani">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- Francis -->
       <div class="col-6 col-md-3 rv">
         <div class="t-card">
-          <div class="t-av">FMS</div>
+          <div class="t-photo-wrap">
+            <img src="" alt="Francis Matthew Simmonds" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="t-av" style="display:flex;">FMS</div>
+          </div>
           <h6>Francis Matthew Simmonds</h6>
           <div class="role">Lead Consultant</div>
-          <div style="font-size:.75rem;color:#999;margin-top:4px;">Health Systems & Programme Evaluation</div>
+          <div class="t-spec">Health Systems & Programme Evaluation</div>
+          <div class="t-actions">
+            <a href="mailto:francissimmonds@olympusrets.net" class="t-btn t-btn-email" title="Email Francis" aria-label="Email Francis Matthew Simmonds">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+263" class="t-btn t-btn-phone" title="Call Francis — number coming soon" aria-label="Phone Francis Matthew Simmonds">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -462,7 +517,7 @@
             </h2>
             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Olympus provides world-class Research, Evaluation, Impact Assessment, and Training services. We help organizations answer pressing questions through rigorous methodologies and practica[...]
+                Olympus provides world-class Research, Evaluation, Impact Assessment, and Training services. We help organizations answer pressing questions through rigorous methodologies and practical insights that drive real change.
               </div>
             </div>
           </div>
@@ -474,7 +529,7 @@
             </h2>
             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                We serve governments, NGOs, parastatals, intergovernmental organizations, development agencies, private sector companies, and individuals globally. Our experience spans 8+ sectors[...]
+                We serve governments, NGOs, parastatals, intergovernmental organizations, development agencies, private sector companies, and individuals globally. Our experience spans 8+ sectors across Zimbabwe and beyond.
               </div>
             </div>
           </div>
@@ -486,7 +541,7 @@
             </h2>
             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Olympus was established in 2015 and has been providing exceptional research, evaluation and training services for over 8 years with a team of 4 expert consultants.
+                Olympus was established in 2015 and has been providing exceptional research, evaluation and training services for over 10 years with a team of 4 expert consultants.
               </div>
             </div>
           </div>
@@ -498,7 +553,7 @@
             </h2>
             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Yes, Olympus operates globally. While based in Ruwa, Zimbabwe, we provide world-class consulting services wherever needed, with proven experience across multiple continents.
+                Yes, Olympus operates globally. While based in Ruwa, Zimbabwe, we provide world-class consulting services wherever needed, with proven experience across multiple countries and continents.
               </div>
             </div>
           </div>
@@ -510,7 +565,7 @@
             </h2>
             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Our strength lies in rigorous methodology, practical insights, and deep expertise. We combine innovation with integrity, delivering high-quality research and training that drives real [...]
+                Our strength lies in rigorous methodology, practical insights, and deep expertise. We combine innovation with integrity, delivering high-quality research and training that drives real results for our clients.
               </div>
             </div>
           </div>
@@ -522,7 +577,7 @@
             </h2>
             <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Simply fill out our contact form or reach us directly via phone or email. We'll discuss your needs, provide a proposal, and work with you to create a customized engagement plan.
+                Simply fill out our contact form or reach us directly via phone or email. We'll discuss your needs, provide a proposal, and work with you to create a customised engagement plan.
               </div>
             </div>
           </div>
@@ -556,28 +611,26 @@
           <div class="ci-icon"><i class="fas fa-phone"></i></div>
           <div>
             <h6>Phone</h6>
-            <p>+263772 919 893<br/>+263779093311 &nbsp;·&nbsp; +263 773395407 &nbsp;·&nbsp; +263 785682079</p>
+            <p>+263 772 919 893<br/>+263 779 093 311 &nbsp;·&nbsp; +263 773 395 407 &nbsp;·&nbsp; +263 785 682 079</p>
           </div>
         </div>
         <div class="ci">
           <div class="ci-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <h6>Email</h6>
-            <p>coschik44@gmail.com<br/>bvirindij@gmail.com &nbsp;·&nbsp; simmondsfm@gmail.com</p>
+            <p><a href="mailto:info@olympusrets.net" style="color:#fff;text-decoration:none;">info@olympusrets.net</a><br/>
+            <a href="mailto:team@olympusrets.net" style="color:rgba(255,255,255,.6);font-size:.83rem;text-decoration:none;">team@olympusrets.net</a></p>
           </div>
         </div>
-        <!-- MAP — 9561 Chipukutu Park, Ruwa -->
-      <div class="map-wrap">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7594.510730934381!2d31.221964338317786!3d-17.87350898239557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931bf07c623e25f%3A0xfd49a3efc9c991c3!2sChipukutu%20Park!5e0!3m2!1sen!2szw!4v1782644724409!5m2!1sen!2szw"
-    width="100%"
-    height="300"
-    style="border:0; border-radius:8px;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin">
-  </iframe>
-</div>
+        <!-- MAP -->
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7594.510730934381!2d31.221964338317786!3d-17.87350898239557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931bf07c623e25f%3A0xfd49a3efc9c991c3!2sChipukutu%20Park!5e0!3m2!1sen!2szw!4v1782644724409!5m2!1sen!2szw"
+            width="100%" height="100%" style="border:0;display:block;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
         <p style="color:rgba(255,255,255,.4);font-size:.72rem;margin-top:8px;">
           <i class="fas fa-map-marker-alt me-1" style="color:var(--gold);"></i>
           9561 Chipukutu Park, Ruwa, Zimbabwe
@@ -588,34 +641,44 @@
       <div class="col-lg-7 rv">
         <div class="form-wrap">
           <h5 style="font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.3rem;margin-bottom:22px;">Send Us a Message</h5>
-          <form role="form" onsubmit="doSend(); return false;">
+          <form id="contactForm" role="form" novalidate onsubmit="doSend(event)">
             <div class="row g-3">
               <div class="col-md-6">
-                <label class="form-label" for="fn">Full Name <span aria-label="required">*</span></label>
-                <input type="text" class="form-control" placeholder="Your name" id="fn" required aria-required="true"/>
+                <label class="form-label" for="fn">Full Name <span class="req" aria-label="required">*</span></label>
+                <input type="text" class="form-control" placeholder="Your name" id="fn" required minlength="2"/>
+                <div class="invalid-feedback">Please enter your full name.</div>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="org">Organisation</label>
-                <input type="text" class="form-control" placeholder="Your organisation" id="org" aria-describedby="orgHelp"/>
+                <input type="text" class="form-control" placeholder="Your organisation" id="org"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="fe">Email Address <span class="req" aria-label="required">*</span></label>
+                <input type="email" class="form-control" placeholder="you@example.com" id="fe" required/>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="fp">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+263 7XX XXX XXX" id="fp"/>
               </div>
               <div class="col-12">
-                <label class="form-label" for="fe">Email Address <span aria-label="required">*</span></label>
-                <input type="email" class="form-control" placeholder="you@example.com" id="fe" required aria-required="true"/>
-              </div>
-              <div class="col-12">
-                <label class="form-label" for="fs">Service of Interest <span aria-label="required">*</span></label>
-                <select class="form-select" id="fs" required aria-required="true">
+                <label class="form-label" for="fs">Service of Interest <span class="req" aria-label="required">*</span></label>
+                <select class="form-select" id="fs" required>
                   <option value="" disabled selected>Select a service…</option>
                   <option>Research</option>
                   <option>Evaluation</option>
                   <option>Impact Assessment</option>
                   <option>Training</option>
+                  <option>MEAL Consultancy</option>
+                  <option>Data Systems & Analytics</option>
                   <option>Multiple / Not Sure</option>
                 </select>
+                <div class="invalid-feedback">Please select a service.</div>
               </div>
               <div class="col-12">
-                <label class="form-label" for="fm">Message <span aria-label="required">*</span></label>
-                <textarea class="form-control" rows="4" placeholder="Describe your need or project…" id="fm" required aria-required="true"></textarea>
+                <label class="form-label" for="fm">Message <span class="req" aria-label="required">*</span></label>
+                <textarea class="form-control" rows="4" placeholder="Describe your need or project…" id="fm" required minlength="10"></textarea>
+                <div class="invalid-feedback">Please enter a message (at least 10 characters).</div>
               </div>
               <div class="col-12 mt-1">
                 <button type="submit" class="btn-send" id="sendBtn">
@@ -635,13 +698,13 @@
   <div class="container">
     <div class="row g-4 align-items-start mb-3">
       <div class="col-md-4">
-        <img src="./images/olympus-logo.svg" alt="Olympus RETS brand logo showing stylized gold mountain icon and OLYMPUS text" height="35" class="mb-2"/>
+        <img src="./images/olympus-logo.svg" alt="Olympus RETS logo" height="35" class="mb-2"/>
         <p style="font-size:.82rem;line-height:1.7;">World-class research, evaluation and training services — Ruwa, Zimbabwe.</p>
         <div class="soc mt-2">
-          <a href="#"><i class="fab fa-linkedin-in fa-xs"></i></a>
-          <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-xs"></i></a>
-          <a href="mailto:coschik44@gmail.com"><i class="fas fa-envelope fa-xs"></i></a>
+          <a href="https://www.linkedin.com/company/olympus-rets" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-xs"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-xs"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-twitter fa-xs"></i></a>
+          <a href="mailto:info@olympusrets.net" aria-label="Email us"><i class="fas fa-envelope fa-xs"></i></a>
         </div>
       </div>
       <div class="col-6 col-md-2 offset-md-1">
@@ -664,28 +727,27 @@
       </div>
       <div class="col-md-3">
         <p style="color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px;">Contact</p>
-        <p style="line-height:2;">9561 Chipukutu Park<br/>Ruwa, Zimbabwe<br/>+263772 919 893<br/>coschik44@gmail.com</p>
+        <p style="line-height:2;">9561 Chipukutu Park<br/>Ruwa, Zimbabwe<br/>+263 772 919 893<br/><a href="mailto:info@olympusrets.net" style="color:rgba(255,255,255,.5);">info@olympusrets.net</a></p>
       </div>
     </div>
     <hr style="border-color:rgba(255,255,255,.08);"/>
     <div class="d-flex flex-wrap justify-content-between gap-2">
       <span>&copy; 2026 Olympus Research, Evaluation and Training Services. All rights reserved.</span>
-      
     </div>
   </div>
 </footer>
 
-<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" title="Scroll to top"><i class="fas fa-chevron-up fa-sm"></i></button>
-<button id="btb" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" aria-label="Scroll to bottom" title="Scroll to bottom"><i class="fas fa-chevron-down fa-sm"></i></button>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fas fa-chevron-up fa-sm"></i></button>
+<button id="btb" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" aria-label="Scroll to bottom"><i class="fas fa-chevron-down fa-sm"></i></button>
 <div id="scrollProgress" role="navigation" aria-label="Page sections navigation"></div>
-<div id="toast" role="status" aria-live="polite" aria-atomic="true">&#10003; Message sent — we'll be in touch!</div>
+<div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-<!-- Cookie Consent Banner -->
+<!-- Cookie Banner -->
 <div id="cookieBanner" class="cookie-banner">
   <div class="cookie-content">
     <div>
-      <h6 style="margin-bottom:8px;color:#fff;">🍪 Cookie Consent</h6>
-      <p style="margin:0;color:rgba(255,255,255,.85);font-size:.85rem;">We use cookies to improve your browsing experience and analyze site traffic. By continuing to use our site, you consent to our c[...]
+      <h6 style="margin-bottom:8px;color:#fff;">🍪 Cookie Notice</h6>
+      <p style="margin:0;color:rgba(255,255,255,.85);font-size:.85rem;">We use cookies to improve your browsing experience. By continuing, you consent to our use of cookies.</p>
     </div>
     <div class="cookie-actions">
       <button id="cookieAccept" class="cookie-btn accept">Accept</button>
@@ -698,4 +760,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.2.0/dist/index.min.js"></script>
 <script src="./script.js"></script>
 </body>
+
 </html>
