@@ -517,3 +517,128 @@
       .about-float{right:0;bottom:-12px;}
       .map-wrap{height:220px;}
     }
+
+/* ── TEAM CARD PHOTO + ACTIONS (ADD TO styles.css) ── */
+
+.t-photo-wrap {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.t-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Fallback avatar shown when no photo */
+.t-photo-wrap .t-av {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--navy);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.t-spec {
+  font-size: .75rem;
+  color: #999;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* Consultant email + phone action buttons */
+.t-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(12, 31, 61, .08);
+}
+
+.t-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.t-btn-email {
+  background: rgba(201, 146, 30, .12);
+  color: var(--gold);
+  border: 1.5px solid rgba(201, 146, 30, .3);
+}
+
+.t-btn-email:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.t-btn-phone {
+  background: rgba(12, 31, 61, .07);
+  color: var(--navy);
+  border: 1.5px solid rgba(12, 31, 61, .15);
+}
+
+.t-btn-phone:hover {
+  background: var(--navy);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── FORM VALIDATION STYLES ── */
+.req { color: var(--gold); }
+
+.form-wrap .form-control.is-invalid,
+.form-wrap .form-select.is-invalid {
+  border-color: #ff6b6b;
+  background-image: none;
+}
+
+.form-wrap .form-control.is-valid,
+.form-wrap .form-select.is-valid {
+  border-color: #51cf66;
+  background-image: none;
+}
+
+.invalid-feedback {
+  color: #ff6b6b;
+  font-size: .78rem;
+  margin-top: 4px;
+}
+
+/* ── CONTACT EMAIL LINK ── */
+.ci p a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .2s;
+}
+.ci p a:hover { color: var(--gold2); }
+
+/* ── TOAST IMPROVEMENT ── */
+#toast {
+  min-width: 280px;
+  text-align: center;
+}
