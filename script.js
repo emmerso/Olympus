@@ -91,7 +91,7 @@ function showToast(msg, isError = false){
   setTimeout(() => t.classList.remove('on'), 5000);
 }
 
-// ── FORM VALIDATION + SEND ──
+// ── FORM VALIDATION ──
 function validateForm(){
   const form = document.getElementById('contactForm');
   let valid = true;
@@ -128,6 +128,7 @@ function validateForm(){
   });
 });
 
+// ── FORM SUBMIT — now posts to our own /api/contact serverless function ──
 function doSend(e){
   if(e) e.preventDefault();
 
@@ -137,42 +138,45 @@ function doSend(e){
   sendBtn.disabled = true;
   sendBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending…';
 
-  const params = {
+  const payload = {
     from_name:    document.getElementById('fn').value.trim(),
     from_email:   document.getElementById('fe').value.trim(),
-    organisation: document.getElementById('org').value.trim() || 'Not provided',
-    phone:        document.getElementById('fp').value.trim() || 'Not provided',
+    organisation: document.getElementById('org').value.trim(),
+    phone:        document.getElementById('fp').value.trim(),
     service:      document.getElementById('fs').value,
     message:      document.getElementById('fm').value.trim(),
+    website:      document.getElementById('hp')?.value || '', // honeypot — should always be empty
   };
 
-  // Send to both info@ and team@olympusrets.net
-  const recipients = ['info@olympusrets.net', 'team@olympusrets.net'];
-  const promises = recipients.map(to =>
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', { ...params, to_email: to })
-  );
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
+    .then(async (res) => {
+      const data = await res.json().catch(() => ({}));
+      return { ok: res.ok, data };
+    })
+    .then(({ ok, data }) => {
+      sendBtn.disabled = false;
+      sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
 
-  Promise.allSettled(promises).then(results => {
-    const anySuccess = results.some(r => r.status === 'fulfilled');
-    sendBtn.disabled = false;
-    sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-
-    if(anySuccess){
-      showToast("Message sent — we'll be in touch soon!");
-      document.getElementById('contactForm').reset();
-      ['fn','fe','fs','fm'].forEach(id => {
-        const el = document.getElementById(id);
-        if(el) el.classList.remove('is-valid','is-invalid');
-      });
-    } else {
+      if (ok && data.success) {
+        showToast("Message sent — we'll be in touch soon!");
+        document.getElementById('contactForm').reset();
+        ['fn','fe','fs','fm'].forEach(id => {
+          const el = document.getElementById(id);
+          if(el) el.classList.remove('is-valid','is-invalid');
+        });
+      } else {
+        showToast(data.error || 'Failed to send. Please email us directly at info@olympusrets.net', true);
+      }
+    })
+    .catch(() => {
+      sendBtn.disabled = false;
+      sendBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
       showToast('Failed to send. Please email us directly at info@olympusrets.net', true);
-    }
-  });
-}
-
-// ── EMAILJS INIT ──
-if(typeof emailjs !== 'undefined'){
-  emailjs.init('YOUR_PUBLIC_KEY_HERE');
+    });
 }
 
 // ── COOKIE CONSENT ──
