@@ -199,7 +199,7 @@
       margin-bottom:18px;
     }
     .svc-icon i{color:var(--gold);font-size:1.2rem;}
-    .svc-card h5{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.15rem;margin-bottom:10px;}
+    .svc-card h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.15rem;margin-bottom:10px;}
     .svc-card p{color:rgba(255,255,255,.57);font-size:.87rem;line-height:1.74;margin:0;}
 
     /* ── CLIENTS ── */
@@ -218,7 +218,7 @@
       display:flex;align-items:center;gap:18px;
     }
     .globe-box i{color:var(--gold);font-size:2.2rem;flex-shrink:0;}
-    .globe-box h6{font-family:'Cormorant Garamond',serif;font-size:1.25rem;margin-bottom:4px;}
+    .globe-box h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;margin-bottom:4px;}
     .globe-box p{color:rgba(255,255,255,.6);font-size:.85rem;margin:0;line-height:1.6;}
 
     /* ── WORK ── */
@@ -253,7 +253,7 @@
       font-family:'Cormorant Garamond',serif;
       font-size:1.7rem;color:var(--gold);font-weight:700;
     }
-    .t-card h6{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;margin-bottom:3px;}
+    .t-card h3{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;margin-bottom:3px;}
     .t-card .role{font-size:.74rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;}
 
     /* ── CONTACT + MAP ── */
@@ -267,7 +267,7 @@
       display:flex;align-items:center;justify-content:center;
     }
     .ci-icon i{color:var(--gold);font-size:.95rem;}
-    .ci h6{color:rgba(255,255,255,.5);font-size:.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+    .ci h3{color:rgba(255,255,255,.5);font-size:.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
     .ci p{color:#fff;font-size:.88rem;line-height:1.55;margin:0;}
     .form-wrap{
       background:rgba(255,255,255,.05);
@@ -641,4 +641,56 @@
 #toast {
   min-width: 280px;
   text-align: center;
+}
+
+/* ── SUB-PAGE COMPONENTS (service pages) ── */
+.page-hero{
+  min-height:52vh;padding-top:150px;padding-bottom:60px;
+  background:
+    linear-gradient(135deg,rgba(12,31,61,.94) 0%,rgba(12,31,61,.82) 55%,rgba(21,45,82,.9) 100%),
+    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80') center/cover no-repeat;
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 65% 45%,rgba(201,146,30,.12) 0%,transparent 65%);
+}
+.page-hero .container{position:relative;z-index:1;}
+.page-hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4.2vw,3.4rem);
+  font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;
+}
+.page-hero h1 em{color:var(--gold2);font-style:normal;}
+.page-hero p{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.8;max-width:620px;}
+.breadcrumb-nav{font-size:.78rem;letter-spacing:.4px;margin-bottom:18px;}
+.breadcrumb-nav a{color:rgba(255,255,255,.6);text-decoration:none;}
+.breadcrumb-nav a:hover{color:var(--gold2);}
+.breadcrumb-nav span{color:rgba(255,255,255,.35);margin:0 6px;}
+.breadcrumb-nav .current{color:var(--gold2);}
+
+.related-card{
+  background:var(--white);border-radius:10px;padding:24px 22px;height:100%;
+  border-left:4px solid var(--gold);box-shadow:0 2px 14px rgba(12,31,61,.06);
+  transition:transform .2s,box-shadow .2s;text-decoration:none;display:block;color:var(--navy);
+}
+.related-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(12,31,61,.12);color:var(--navy);}
+.related-card h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:6px;color:var(--navy);}
+.related-card p{font-size:.85rem;color:var(--grey);line-height:1.6;margin:0;}
+.related-card .rc-arrow{color:var(--gold);font-size:.8rem;margin-top:10px;display:inline-block;}
+
+.cta-band{
+  background:var(--navy);border-radius:14px;padding:44px 40px;text-align:center;
+  background-image:radial-gradient(ellipse at 30% 30%,rgba(201,146,30,.12) 0%,transparent 60%);
+}
+.cta-band h2{font-family:'Cormorant Garamond',serif;color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;}
+.cta-band p{color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 26px;font-size:.95rem;}
+
+.check-list{list-style:none;padding:0;margin:0;}
+.check-list li{
+  position:relative;padding:8px 0 8px 30px;color:var(--grey);font-size:.92rem;line-height:1.7;
+}
+.check-list li::before{
+  content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;
+  position:absolute;left:0;top:9px;color:var(--gold);font-size:.8rem;
 }
