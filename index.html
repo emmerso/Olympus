@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="google-site-verification" content="rfb2HcvMH0YgyrVLE0P_7gbYvGY4aUSCjz8f0FxjR0c" />
@@ -6,24 +8,25 @@
   <link rel="canonical" href="https://olympusrets.net/"/>
 
   <!-- Primary SEO -->
-  <title>Olympus Research, Evaluation & Training Services | Harare, Zimbabwe</title>
-  <meta name="description" content="Olympus Research, Evaluation and Training Services — leading consultancy in research, MEAL, data analytics, and training based in Harare, Zimbabwe. Serving NGOs, government agencies and development partners."/>
-  <meta name="keywords" content="research evaluation training Zimbabwe, MEAL consultancy Harare, data analytics Zimbabwe, NGO consulting Zimbabwe, monitoring evaluation Zimbabwe, research consultancy Harare, development consultancy Zimbabwe, programme evaluation Zimbabwe, Cosmas Chikwawawa, Everson Molande, John Victor Chiyani, Francis Matthew Simmonds, Olympus RETS Zimbabwe"/>
+  <title>Research Consultancy Zimbabwe | M&E, MEAL & Data Analytics | Olympus RETS</title>
+  <meta name="description" content="Olympus RETS is a research consultancy and monitoring &amp; evaluation (M&amp;E) firm in Ruwa, Harare, Zimbabwe, offering MEAL consultancy, impact assessment, data analytics and training for NGOs, governments and development partners."/>
   <meta name="author" content="Olympus Research, Evaluation and Training Services"/>
 
   <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:title" content="Olympus Research, Evaluation & Training Services | Harare, Zimbabwe"/>
-  <meta property="og:description" content="Leading consultancy in research, MEAL, data analytics and training based in Harare, Zimbabwe. Serving NGOs, governments and development partners."/>
+  <meta property="og:title" content="Research Consultancy Zimbabwe | M&E, MEAL & Data Analytics | Olympus RETS"/>
+  <meta property="og:description" content="Research, monitoring &amp; evaluation (M&amp;E), MEAL consultancy, data analytics and training consultancy based in Harare, Zimbabwe. Serving NGOs, governments and development partners."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://olympusrets.net"/>
   <meta property="og:image" content="https://olympusrets.net/favicon.png"/>
+  <meta property="og:image:width" content="512"/>
+  <meta property="og:image:height" content="512"/>
   <meta property="og:locale" content="en_ZW"/>
   <meta property="og:site_name" content="Olympus RETS"/>
 
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Olympus Research, Evaluation & Training Services"/>
-  <meta name="twitter:description" content="Leading research, MEAL and training consultancy based in Harare, Zimbabwe."/>
+  <meta name="twitter:title" content="Research Consultancy Zimbabwe | Olympus RETS"/>
+  <meta name="twitter:description" content="Research, M&amp;E, MEAL consultancy and data analytics based in Harare, Zimbabwe."/>
   <meta name="twitter:image" content="https://olympusrets.net/favicon.png"/>
 
   <!-- Favicon -->
@@ -33,18 +36,27 @@
   <meta name="apple-mobile-web-app-title" content="Olympus RETS"/>
   <meta name="theme-color" content="#0c1f3d"/>
 
+  <!-- Performance: preconnect / preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+  <link rel="preload" as="image" href="./images/olympus-logo-navbar.png"/>
+
   <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "LocalBusiness"],
+    "@id": "https://olympusrets.net/#organization",
     "name": "Olympus Research, Evaluation and Training Services",
     "alternateName": "Olympus RETS",
     "url": "https://olympusrets.net",
     "logo": "https://olympusrets.net/favicon.png",
     "image": "https://olympusrets.net/favicon.png",
-    "description": "Leading consultancy in research, monitoring, evaluation and learning (MEAL), data analytics, and training based in Harare, Zimbabwe.",
+    "description": "Research consultancy and monitoring &amp; evaluation (M&E) firm offering MEAL consultancy, data analytics, impact assessment and training, based in Ruwa, Harare, Zimbabwe.",
     "priceRange": "$$",
+    "foundingDate": "2015",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "9561 Chipukutu Park",
@@ -64,10 +76,12 @@
       "email": "info@olympusrets.net",
       "availableLanguage": "English"
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Zimbabwe"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Ruwa"},
+      {"@type": "City", "name": "Harare"},
+      {"@type": "Country", "name": "Zimbabwe"},
+      {"@type": "Place", "name": "Southern Africa"}
+    ],
     "sameAs": [
       "https://www.linkedin.com/company/olympus-rets"
     ],
@@ -75,14 +89,87 @@
       "@type": "OfferCatalog",
       "name": "Consultancy Services",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Research & Evaluation"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "MEAL — Monitoring, Evaluation, Accountability & Learning"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data Systems & Analytics"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Training & Capacity Building"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Health Systems & Programme Evaluation"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livelihoods & Labour Market Economics"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Research & Evaluation", "serviceType": "Research Consultancy"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "MEAL — Monitoring, Evaluation, Accountability & Learning", "serviceType": "MEAL Consultancy"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data Systems & Analytics", "serviceType": "Data Analytics"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Training & Capacity Building", "serviceType": "Training Consultancy"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Health Systems & Programme Evaluation", "serviceType": "Programme Evaluation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livelihoods & Labour Market Economics", "serviceType": "Development Consultancy"}}
       ]
     }
+  }
+  </script>
+
+  <!-- Individual Service Schemas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Research Consultancy",
+        "serviceType": "Research Consultancy Zimbabwe",
+        "provider": {"@id": "https://olympusrets.net/#organization"},
+        "areaServed": "Zimbabwe",
+        "description": "Baseline surveys, market research, customer satisfaction studies, demographic surveys and needs assessments using quantitative and qualitative methods."
+      },
+      {
+        "@type": "Service",
+        "name": "Monitoring and Evaluation (M&E)",
+        "serviceType": "Monitoring and Evaluation Zimbabwe",
+        "provider": {"@id": "https://olympusrets.net/#organization"},
+        "areaServed": "Zimbabwe",
+        "description": "Design of M&E frameworks, formative evaluation, and end-of-programme evaluation services."
+      },
+      {
+        "@type": "Service",
+        "name": "MEAL Consultancy",
+        "serviceType": "MEAL Consultancy Zimbabwe",
+        "provider": {"@id": "https://olympusrets.net/#organization"},
+        "areaServed": "Zimbabwe",
+        "description": "Monitoring, Evaluation, Accountability and Learning (MEAL) systems and support for development programmes."
+      },
+      {
+        "@type": "Service",
+        "name": "Impact Assessment",
+        "serviceType": "Impact Assessment",
+        "provider": {"@id": "https://olympusrets.net/#organization"},
+        "areaServed": "Zimbabwe",
+        "description": "Comprehensive and incisive impact assessments of projects and programmes to demonstrate accountability and results."
+      },
+      {
+        "@type": "Service",
+        "name": "Data Analytics",
+        "serviceType": "Data Analytics Zimbabwe",
+        "provider": {"@id": "https://olympusrets.net/#organization"},
+        "areaServed": "Zimbabwe",
+        "description": "Data systems design, quantitative and qualitative data analysis, and reporting using tools such as SPSS and NVivo."
+      },
+      {
+        "@type": "Service",
+        "name": "Training Consultancy",
+        "serviceType": "Training Consultancy Zimbabwe",
+        "provider": {"@id": "https://olympusrets.net/#organization"},
+        "areaServed": "Zimbabwe",
+        "description": "SPSS, NVivo, qualitative analysis, organisational development, change management, leadership and strategic planning training."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://olympusrets.net/"
+      }
+    ]
   }
   </script>
 
@@ -161,12 +248,70 @@
   }
   </script>
 
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Olympus offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Olympus provides world-class Research, Evaluation, Impact Assessment, and Training services. We help organizations answer pressing questions through rigorous methodologies and practical insights that drive real change."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are your typical clients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve governments, NGOs, parastatals, intergovernmental organizations, development agencies, private sector companies, and individuals globally. Our experience spans 8+ sectors across Zimbabwe and beyond."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long have you been in business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Olympus was established in 2015 and has been providing exceptional research, evaluation and training services for over 10 years with a team of 4 expert consultants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work internationally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Olympus operates globally. While based in Ruwa, Zimbabwe, we provide world-class consulting services wherever needed, with proven experience across multiple countries and continents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Olympus different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our strength lies in rigorous methodology, practical insights, and deep expertise. We combine innovation with integrity, delivering high-quality research and training that drives real results for our clients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply fill out our contact form or reach us directly via phone or email. We'll discuss your needs, provide a proposal, and work with you to create a customised engagement plan."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="./styles.css"/>
-  <script src="./error-handler.js"></script>
+  <script src="./error-handler.js" defer></script>
 </head>
 <body>
 
@@ -177,7 +322,7 @@
 <nav id="mainNav" class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
   <div class="container">
     <a href="#hero" aria-label="Olympus home">
-     <img src="./images/olympus-logo-navbar.png" alt="Olympus RETS logo" height="36" style="max-width:160px;"/>
+     <img src="./images/olympus-logo-navbar.png" alt="Olympus RETS - Research, Evaluation and Training Services logo" width="87" height="36" style="max-width:160px;"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nm" aria-controls="nm" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -214,6 +359,37 @@
           <div><div class="kpi-n counter" data-target="4">0</div><div class="kpi-l">Consultants</div></div>
           <div><div class="kpi-n counter" data-target="8">0</div><div class="kpi-l">Sectors</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEO INTRO / RME SERVICES ── -->
+<section id="rme-overview" aria-label="Research, Monitoring and Evaluation Services in Zimbabwe">
+  <div class="container">
+    <div class="row rv">
+      <div class="col-lg-10 mx-auto">
+        <span class="s-label">Zimbabwe's Trusted Research Partner</span>
+        <h2 class="s-title">Research, Monitoring &amp; Evaluation Services in <em>Zimbabwe</em></h2>
+        <div class="gold-bar"></div>
+        <p style="color:var(--grey);font-size:.95rem;line-height:1.9;">
+          Olympus Research, Evaluation and Training Services (Olympus RETS) is a research consultancy based in Ruwa, Harare, Zimbabwe, providing monitoring and evaluation Zimbabwe organisations can rely on. As a dedicated MEAL consultancy, we design and implement Monitoring, Evaluation, Accountability and Learning systems that help governments, NGOs, intergovernmental bodies and development partners track progress, demonstrate results and make evidence-based decisions.
+        </p>
+        <p style="color:var(--grey);font-size:.95rem;line-height:1.9;">
+          Our programme evaluation work spans baseline surveys, formative reviews and end-of-programme evaluations across sectors including health, water and sanitation, livelihoods, social protection and education. Every engagement is grounded in rigorous quantitative and qualitative methods, giving clients across Zimbabwe and Southern Africa confidence in the findings we deliver. Alongside evaluation, our impact assessment services measure the real-world change created by projects and programmes, providing the accountability that donors and boards expect.
+        </p>
+        <p style="color:var(--grey);font-size:.95rem;line-height:1.9;">
+          Data sits at the centre of good decision-making, which is why our <a href="./data-analytics.html">data analytics</a> practice supports clients with data systems design, statistical analysis using tools such as SPSS and NVivo, and clear, actionable reporting. This research consultancy Zimbabwe capability is complemented by our <a href="./training.html">training consultancy</a> arm, which builds internal capacity through courses in data analysis, organisational development, change management, leadership and strategic planning.
+        </p>
+        <p style="color:var(--grey);font-size:.95rem;line-height:1.9;">
+          As a development consultancy with more than ten years of experience and a track record of 18+ completed projects, Olympus RETS combines local knowledge of the Zimbabwean context with international best practice. Whether you need a standalone impact assessment, an ongoing MEAL consultancy partner, or full-scale monitoring and evaluation Zimbabwe support for a multi-year programme, our team of expert consultants is positioned to deliver rigorous, practical and timely results.
+        </p>
+        <p style="color:var(--grey);font-size:.95rem;line-height:1.9;">
+          Clients choose Olympus RETS because we pair methodological rigour with practical, easy-to-act-on recommendations. Every research consultancy engagement begins with a clear understanding of the client's objectives, followed by a fit-for-purpose design — whether that calls for household surveys, key informant interviews, focus group discussions, or a mixed-methods approach. Reports are written for decision-makers, not just technical audiences, so that findings from our monitoring and evaluation Zimbabwe assignments translate directly into stronger programming and better outcomes.
+        </p>
+        <p style="color:var(--grey);font-size:.95rem;line-height:1.9;">
+          Based in Ruwa, on the outskirts of Harare, we are well placed to serve clients throughout Zimbabwe and the wider Southern Africa region. If your organisation is planning a baseline study, a mid-term or end-of-programme evaluation, an impact assessment, or a capacity-building training programme, get in touch with our research consultancy Zimbabwe and MEAL consultancy team to discuss how we can support your next phase of work.
+        </p>
       </div>
     </div>
   </div>
@@ -271,29 +447,29 @@
       <div class="col-sm-6 col-lg-3 rv">
         <div class="svc-card">
           <div class="svc-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-          <h5>Research</h5>
-          <p>Baseline surveys, market research, customer satisfaction, demographic surveys and needs assessments using quantitative and qualitative methods.</p>
+          <h3><a href="./research.html" style="color:#fff;text-decoration:none;">Research</a></h3>
+          <p>Baseline surveys, market research, customer satisfaction, demographic surveys and needs assessments using quantitative and qualitative methods. <a href="./research.html" style="color:var(--gold2);">Learn more &rarr;</a></p>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 rv">
         <div class="svc-card">
           <div class="svc-icon"><i class="fas fa-clipboard-check"></i></div>
-          <h5>Evaluation</h5>
-          <p>Design of M&E frameworks, formative evaluation, and comprehensive end-of-programme evaluation services.</p>
+          <h3><a href="./evaluation.html" style="color:#fff;text-decoration:none;">Evaluation</a></h3>
+          <p>Design of M&E frameworks, formative evaluation, and comprehensive end-of-programme evaluation services. <a href="./evaluation.html" style="color:var(--gold2);">Learn more &rarr;</a> &middot; <a href="./meal-consultancy.html" style="color:var(--gold2);">MEAL Consultancy</a></p>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 rv">
         <div class="svc-card">
           <div class="svc-icon"><i class="fas fa-scale-balanced"></i></div>
-          <h5>Impact Assessment</h5>
-          <p>Comprehensive and incisive impact assessments of projects and programmes to demonstrate accountability and results.</p>
+          <h3><a href="./impact-assessment.html" style="color:#fff;text-decoration:none;">Impact Assessment</a></h3>
+          <p>Comprehensive and incisive impact assessments of projects and programmes to demonstrate accountability and results. <a href="./impact-assessment.html" style="color:var(--gold2);">Learn more &rarr;</a></p>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 rv">
         <div class="svc-card">
           <div class="svc-icon"><i class="fas fa-chalkboard-user"></i></div>
-          <h5>Training</h5>
-          <p>SPSS, NVivo, qualitative analysis, organisational development, change management, leadership and strategic planning training.</p>
+          <h3><a href="./training.html" style="color:#fff;text-decoration:none;">Training</a></h3>
+          <p>SPSS, NVivo, qualitative analysis, organisational development, change management, leadership and strategic planning training. <a href="./training.html" style="color:var(--gold2);">Learn more &rarr;</a></p>
         </div>
       </div>
     </div>
@@ -322,7 +498,7 @@
         <div class="globe-box mb-3">
           <i class="fas fa-earth-americas"></i>
           <div>
-            <h6>Global Scope</h6>
+            <h3>Global Scope</h3>
             <p>Olympus RETS operates globally, providing world-class consulting wherever it is needed.</p>
           </div>
         </div>
@@ -416,7 +592,7 @@
             <img src="" alt="Cosmas Chikwawawa" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="t-av" style="display:flex;">CC</div>
           </div>
-          <h6>Cosmas Chikwawawa</h6>
+          <h3>Cosmas Chikwawawa</h3>
           <div class="role">Lead Consultant</div>
           <div class="t-spec">Qualitative Research & Stakeholder Engagement</div>
           <div class="t-actions">
@@ -437,7 +613,7 @@
             <img src="" alt="Everson Molande" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="t-av" style="display:flex;">EM</div>
           </div>
-          <h6>Everson Molande</h6>
+          <h3>Everson Molande</h3>
           <div class="role">Lead Consultant</div>
           <div class="t-spec">Data Systems, MEAL & Analytics</div>
           <div class="t-actions">
@@ -458,7 +634,7 @@
             <img src="" alt="John Victor Chiyani" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="t-av" style="display:flex;">JVC</div>
           </div>
-          <h6>John Victor Chiyani</h6>
+          <h3>John Victor Chiyani</h3>
           <div class="role">Lead Consultant</div>
           <div class="t-spec">Livelihoods & Labour Market Economics</div>
           <div class="t-actions">
@@ -479,7 +655,7 @@
             <img src="" alt="Francis Matthew Simmonds" class="t-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="t-av" style="display:flex;">FMS</div>
           </div>
-          <h6>Francis Matthew Simmonds</h6>
+          <h3>Francis Matthew Simmonds</h3>
           <div class="role">Lead Consultant</div>
           <div class="t-spec">Health Systems & Programme Evaluation</div>
           <div class="t-actions">
@@ -604,21 +780,21 @@
         <div class="ci">
           <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
           <div>
-            <h6>Address</h6>
+            <h3>Address</h3>
             <p>9561 Chipukutu Park<br/>Ruwa, Zimbabwe</p>
           </div>
         </div>
         <div class="ci">
           <div class="ci-icon"><i class="fas fa-phone"></i></div>
           <div>
-            <h6>Phone</h6>
+            <h3>Phone</h3>
             <p>+263 772 919 893<br/>+263 779 093 311 &nbsp;·&nbsp; +263 773 395 407 &nbsp;·&nbsp; +263 785 682 079</p>
           </div>
         </div>
         <div class="ci">
           <div class="ci-icon"><i class="fas fa-envelope"></i></div>
           <div>
-            <h6>Email</h6>
+            <h3>Email</h3>
             <p><a href="mailto:info@olympusrets.net" style="color:#fff;text-decoration:none;">info@olympusrets.net</a><br/>
             <a href="mailto:team@olympusrets.net" style="color:rgba(255,255,255,.6);font-size:.83rem;text-decoration:none;">team@olympusrets.net</a></p>
           </div>
@@ -641,7 +817,7 @@
       <!-- Contact Form -->
       <div class="col-lg-7 rv">
         <div class="form-wrap">
-          <h5 style="font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.3rem;margin-bottom:22px;">Send Us a Message</h5>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.3rem;margin-bottom:22px;">Send Us a Message</h3>
           <form id="contactForm" role="form" novalidate onsubmit="doSend(event)">
             <input type="text" id="hp" name="website" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off"/>
             <div class="row g-3">
@@ -700,7 +876,7 @@
   <div class="container">
     <div class="row g-4 align-items-start mb-3">
       <div class="col-md-4">
-   <img src="./images/olympus-logo-full.png" alt="Olympus RETS logo" height="35" style="max-width:160px;" class="mb-2"/>
+   <img src="./images/olympus-logo-full.png" alt="Olympus RETS - Research, Evaluation and Training Services logo" width="85" height="35" style="max-width:160px;" class="mb-2" loading="lazy"/>
         <p style="font-size:.82rem;line-height:1.7;">World-class research, evaluation and training services — Ruwa, Zimbabwe.</p>
         <div class="soc mt-2">
           <a href="https://www.linkedin.com/company/olympus-rets" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-xs"></i></a>
@@ -721,10 +897,12 @@
       <div class="col-6 col-md-2">
         <p style="color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px;">Services</p>
         <ul style="list-style:none;padding:0;line-height:2;">
-          <li><a href="#services">Research</a></li>
-          <li><a href="#services">Evaluation</a></li>
-          <li><a href="#services">Impact Assessment</a></li>
-          <li><a href="#services">Training</a></li>
+          <li><a href="./research.html">Research</a></li>
+          <li><a href="./evaluation.html">Evaluation</a></li>
+          <li><a href="./meal-consultancy.html">MEAL Consultancy</a></li>
+          <li><a href="./data-analytics.html">Data Analytics</a></li>
+          <li><a href="./impact-assessment.html">Impact Assessment</a></li>
+          <li><a href="./training.html">Training</a></li>
         </ul>
       </div>
       <div class="col-md-3">
