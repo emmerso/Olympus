@@ -10,7 +10,9 @@ const scrollProgress = document.getElementById('scrollProgress');
 const sectionNames = {
   'hero':'Hero','about':'About','services':'Services',
   'clients':'Clients','work':'Work','team':'Team',
-  'faq':'FAQ','contact':'Contact'
+  'faq':'FAQ','contact':'Contact','rme-overview':'Overview',
+  'page-hero':'Overview','overview':'Overview','who-its-for':"Who It's For",
+  'related-services':'Related','page-cta':'Contact'
 };
 
 sections.forEach(section => {
