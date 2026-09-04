@@ -3,4 +3,3 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Sitemap: https://olympusrets.net/sitemap.xml
-Crawl-delay: 1
